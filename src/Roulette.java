@@ -20,6 +20,22 @@ public class Roulette {
         Random random = new Random();
         resultNumber = random.nextInt(37);
         resultColor = Colors[resultNumber];
+
+        System.out.println("\n🎡 Крутим рулетку...\n");
+
+        // имитация прокрутки
+        for (int i = 0; i < 20; i++) {
+            int tempNum = random.nextInt(37); // промежуточные "мигающие" числа
+            System.out.print(tempNum + " ");
+            try {
+                Thread.sleep(100 + i * 20); // замедляем прокрутку
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+
+        // финальный результат
+        System.out.println("\n➡ Выпало число: " + resultNumber + " (" + resultColor + ")");
     }
 
     public boolean checkWin(BetType betType, int chosenNum, String chosenColor, int chosenParity) {
