@@ -26,8 +26,6 @@ public class UserManager {
             System.out.print("Выберите действие: ");
 
             int choice = scanner.nextInt();
-            scanner.nextInt();
-            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -51,6 +49,7 @@ public class UserManager {
     }
 
     private void registerUser() {
+        scanner.nextLine();
         System.out.println("\n---Регистрация---");
         System.out.println("Придумай логин: ");
         String username = scanner.nextLine();
@@ -70,6 +69,7 @@ public class UserManager {
     }
 
     private void loginUser() {
+        scanner.nextLine();
         System.out.println("\n--- Вход ---");
         System.out.println("Введите логин: ");
         String username = scanner.nextLine();
