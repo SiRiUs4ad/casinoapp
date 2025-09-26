@@ -21,7 +21,7 @@ public class Roulette {
         resultNumber = random.nextInt(37);
         resultColor = Colors[resultNumber];
 
-        System.out.println("\n🎡 Крутим рулетку...\n");
+        System.out.println("\n🎡 Крутим рулетку...\n"); //спасибо чату джипыти что помог реализовать кручение рулетки
 
         // имитация прокрутки
         for (int i = 0; i < 20; i++) {
